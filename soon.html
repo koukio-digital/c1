@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growcell IT Architect</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            overflow: hidden;
+            flex-direction: column;
+        }
+        .container {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            max-width: 90%;
+        }
+        .gear {
+            font-size: 100px;
+            animation: spin 3s linear infinite;
+        }
+        .logo {
+            width: 250px;
+            max-width: 80%;
+            margin-bottom: 20px;
+        }
+        h1, p {
+            max-width: 90%;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        .fade-in-text {
+            opacity: 0;
+            animation: textFadeIn 3s forwards 1s;
+        }
+        @keyframes textFadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @media (max-width: 1024px) {
+            .gear {
+                font-size: 80px;
+            }
+            .logo {
+                width: 200px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 768px) {
+            .gear {
+                font-size: 70px;
+            }
+            .logo {
+                width: 180px;
+            }
+            h1 {
+                font-size: 22px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+        @media (max-width: 480px) {
+            .gear {
+                font-size: 50px;
+            }
+            .logo {
+                width: 150px;
+            }
+            h1 {
+                font-size: 20px;
+            }
+            p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+          <img src="img/logo.png" alt="Growcell Logo" class="logo">
+        <div class="gear">⚙️</div>
+        <h1 class="fade-in-text">This Website Page is  Under Maintenance</h1>
+        <p class="fade-in-text">We are currently working on some improvements. Please check back soon!</p>
+    </div>
+</body>
+</html>

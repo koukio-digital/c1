@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Growcell IT Architect  contactus form </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/Blue.jpg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    
+    <style>
+        .container2 {
+            width: 90%;
+            max-width: 800px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+        }
+
+        .banner img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #6222CC;
+            font-weight: 600;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 6px 0;
+            border: none;
+            border-radius: 6px;
+            background: #f8f9fa;
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
+            font-size: 14px;
+        }
+
+        input:focus,
+        select:focus {
+            outline: none;
+            border: 2px solid #6222CC;
+        }
+
+        .radio-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .terms-inline {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                max-width: 100%;
+                padding: 20px;
+            }
+        }
+
+        /* Popup Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Checkmark Animation */
+        .checkmark-container {
+            width: 60px;
+            height: 60px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px;
+            animation: popIn 0.3s ease-out;
+        }
+
+        .checkmark {
+            width: 25px;
+            height: 45px;
+            border-width: 0 6px 6px 0;
+            border-style: solid;
+            border-color: white;
+            transform: rotate(45deg);
+            animation: drawCheck 0.4s ease-out 0.3s forwards;
+            opacity: 0;
+        }
+
+        @keyframes popIn {
+            0% {
+                transform: scale(0);
+            }
+
+            80% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes drawCheck {
+            0% {
+                height: 0;
+                width: 0;
+                opacity: 0;
+            }
+
+            100% {
+                height: 45px;
+                width: 25px;
+                opacity: 1;
+            }
+        }
+
+        .close-btn {
+            background-color: #ff4d4d;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            background-color: #e04343;
+        }
+
+        .register-btn {
+            margin-top: 15px;
+            width: 100%;
+            background: rgb(208, 223, 37);
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .register-btn:hover:not(:disabled) {
+            background-color: #45a049;
+        }
+
+        .register-btn:disabled {
+            background: #cccccc !important;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+       <!-- Navbar & Hero Start -->
+       <div class="container-xxl position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+            <a href="" class="navbar-brand p-0">
+                <img src="img/logo.png" alt="Logo"> 
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="fa fa-bars"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav mx-auto py-0">
+                    <a href="index.html" class="nav-item nav-link ">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="service.html" class="nav-item nav-link active" class="nav-item nav-link active">Service</a>    
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle "  data-bs-toggle="dropdown">Career</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="405.html" class="dropdown-item">Internships</a>
+                            <a href="soon.html" class="dropdown-item">freelancing</a>
+                        </div>
+                    </div>
+                    
+                    <a href="comm.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container-xxl bg-primary hero-header">
+            <div class="container px-lg-5">
+                <div class="row g-5 align-items-end">
+                    <div class="col-12 text-center">
+                        <h1 class="text-white animated slideInDown">Service</h1>
+                        <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                        <nav aria-label="breadcrumb">
+                           
+                        </nav>
+                    </div>
+                   
+                </div>
+            </div>
+        </div> 
+    </div>
+    <!-- Navbar & Hero End -->
+
+    <div class="container2">
+        <div class="banner">
+            <img src="img/conn.gif" alt="Company Banner">
+        </div>
+        <form id="internshipForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="gender">Select your Requirement:</label>
+            <select id="Requirement" name="gender" required>
+                <option value="">Select</option>
+                <option value="Male">Website Development</option>
+                <option value="Male">App Development</option>
+                <option value="Male">Social-Media Management</option>
+                <option value="Male">SEO</option>
+                <option value="Male"> ERP</option>
+                <option value="Female">Graphic Design</option>
+                <option value="Other">Other</option>
+            </select>
+
+           
+            
+            <label for="whatsapp">WhatsApp No:</label>
+            <input type="tel" id="whatsapp" name="whatsapp" required>
+
+            <label for="college">Business Name:</label>
+            <input type="text" id="college" name="college" required>
+
+            <label for="college">City Name:</label>
+            <input type="text" id="college" name="college" required>
+
+            <label for="state">Choose Your State</label>
+            <select id="state" name="state" required>
+        
+              
+                
+                <option value="">Select State</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                <option value="Assam">Assam</option>
+                <option value="Bihar">Bihar</option>
+                <option value="Chhattisgarh">Chhattisgarh</option>
+                <option value="Goa">Goa</option>
+                <option value="Gujarat">Gujarat</option>
+                <option value="Haryana">Haryana</option>
+                <option value="Himachal Pradesh">Himachal Pradesh</option>
+                <option value="Jharkhand">Jharkhand</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Kerala">Kerala</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Manipur">Manipur</option>
+                <option value="Meghalaya">Meghalaya</option>
+                <option value="Mizoram">Mizoram</option>
+                <option value="Nagaland">Nagaland</option>
+                <option value="Odisha">Odisha</option>
+                <option value="Punjab">Punjab</option>
+                <option value="Rajasthan">Rajasthan</option>
+                <option value="Sikkim">Sikkim</option>
+                <option value="Tamil Nadu">Tamil Nadu</option>
+                <option value="Telangana">Telangana</option>
+                <option value="Tripura">Tripura</option>
+                <option value="Uttar Pradesh">Uttar Pradesh</option>
+                <option value="Uttarakhand">Uttarakhand</option>
+                <option value="West Bengal">West Bengal</option>
+                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+                <option value="Daman and Diu">Daman and Diu</option>
+                <option value="Lakshadweep">Lakshadweep</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Puducherry">Puducherry</option>
+            </select>
+
+
+           
+
+
+            <!--<label>Mention the Year you are Going to Pass out from Collage:</label>
+            <div class="radio-container">
+                <label><input type="radio" name="year" value="2026" required>2026</label>
+                <label><input type="radio" name="year" value="2027" required>2027</label>
+                <label><input type="radio" name="year" value="2028" required>2028</label>
+                <label><input type="radio" name="year" value="2029" required>2029</label>
+            </div>
+
+        -->
+
+
+           
+            <div class="terms-inline">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the Cancellation policy</label>
+               <!-- <a href="policy.html" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft">Know Cancellation Policy</a> -->
+                
+            </div>
+
+            <button type="submit" class="register-btn" id="submitBtn">Submit</button>
+        </form>
+    </div>
+
+    <!-- Modal Popup -->
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <div class="checkmark-container">
+                <div class="checkmark"></div>
+            </div>
+            <h3>Thank You!</h3>
+            <p>Your form has been submitted successfully.</p>
+            <button class="close-btn" onclick="closeModalAndRedirect()">OK</button>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5 px-lg-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-3">
+                    <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Patna,Bihar 845417 </p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+91 95195 53053</p>
+                    <p><i class="fa fa-envelope me-3"></i>growcelldigital@gmail.com<span></span></p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href="https://x.com/growcelldigital?t=5qd5WtL_MvcNW5KDEhtaWg&s=09"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://github.com/Growcell-IT-Architect"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/growcell.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/growcell/"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="comm.html">Contact Us</a>
+                    <a class="btn btn-link" href="policy.html">Cancellation Policy</a>
+                    <a class="btn btn-link" href="405.html">Career</a>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <img src="img/foter.png" class="responsive-foterimage" alt="foter"> 
+                    <p class="text-white pb-3 animated slideInDown">Future-ready IT solutions empowering enterprises with innovation, efficiency, and seamless technology to drive growth, scalability, and digital transformation effortlessly </p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <img src="img/design1.jpg" class="responsive-foterimage" alt="foter"> 
+                    <p class="text-white pb-3 animated slideInDown">Enabling MSMEs & Startups with Cutting-Edge IT Solutions – Innovate, Scale, and Thrive in the Digital Era with Future-Ready Technology.</p>
+                </div>  
+            </div>
+        </div>
+        <div class="container px-lg-5">
+            <div class="copyright"> 
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="">2024</a>, All Right Reserved. 
+                        Designed By <a class="border-bottom" href="https://growcell.in">Growcell IT Architect</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="index.html">Home</a>
+                            <a href="comm.html">Help</a>
+                            <a href="faq.html">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+        document.getElementById("internshipForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            
+            // Disable the submit button
+            const submitButton = document.getElementById("submitBtn");
+            submitButton.disabled = true;
+            submitButton.textContent = "Submitting...";
+           
+             
+            var formData = new FormData(this);
+            var object = {};
+            formData.forEach((value, key) => {
+                object[key] = value;
+            });
+
+            // Handle file upload
+            var fileInput = document.getElementById("resume");
+            if (fileInput.files.length > 0) {
+                var file = fileInput.files[0];
+                // Check file size
+                if (file.size > 102400) { // 100KB in bytes
+                    alert("Error: File size exceeds 100 KB. Please upload a smaller file.");
+                    submitButton.disabled = false;
+                    submitButton.textContent = "Register";
+                    return;
+                }
+                
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    object.resume = e.target.result.split(",")[1];
+                    submitForm(object, submitButton);
+                };
+                reader.readAsDataURL(file);
+            } else {
+                submitForm(object, submitButton);
+            }
+        });
+
+        function submitForm(data, submitButton) {
+            fetch("https://script.google.com/macros/s/AKfycbzr84tA6nKZgR4NUZikDiAv4CLHL4MUFWLWxAo-1M8LTLN9CTWE7hfU0WPfiVmktil7vA/exec", {
+                method: "POST",
+                mode: "no-cors",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(data)
+            })
+            .then(response => {
+                document.getElementById("popupModal").style.display = "block";
+                document.getElementById("internshipForm").reset();
+                // Keep button disabled since submission was successful
+                submitButton.textContent = "Submitted!";
+            })
+            .catch(error => {
+                alert("Error submitting form: " + error.message);
+                // Re-enable the button if there's an error
+                submitButton.disabled = false;
+                submitButton.textContent = "Register";
+            });
+        }
+
+        function closeModalAndRedirect() {
+            document.getElementById("popupModal").style.display = "none";
+            window.location.href = "index.html";
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            var modal = document.getElementById("popupModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+
+        // Disable paste in all input fields
+        document.querySelectorAll('input, textarea').forEach(function(input) {
+            input.addEventListener('paste', function(event) {
+                event.preventDefault();
+                alert('Pasting is not allowed in this field!');
+            }); 
+        });
+
+        document.addEventListener('copy', function(event) {
+            event.clipboardData.setData('text/plain', 'https://www.growcell.in/');
+            event.preventDefault();
+        });
+
+      
+    </script>
+</body>
+</html> 
+
+

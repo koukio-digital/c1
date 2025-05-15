@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Internship</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/Blue.jpg" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&family=Jost:wght@500;600;700&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-xxl position-relative p-0">
+            <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <!--<h1 class="m-0">Growcell</h1> -->
+                    <img src="img/logo.png" alt="Logo"> 
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav mx-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                      <!--  <a href="project.html" class="nav-item nav-link active">Project</a> -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Career</a>
+                            <div class="dropdown-menu m-0">
+                                <a href="905.html" class="dropdown-item">internships</a>
+                               <!-- <a href="soon.html" class="dropdown-item">jobs</a> -->
+                                <a href="soon.html" class="dropdown-item">Freelancing</a>
+                            </div>
+                        </div>
+                        <a href="comm.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <a href="intern.html" class="btn rounded-pill py-2 px-4 ms-3 d-none d-lg-block">Apply for Internship</a>
+                </div>
+            </nav>
+
+            <div class="container-xxl py-5 bg-primary hero-header">
+                <div class="container my-5 py-5 px-lg-5">
+                    <div class="row g-5 py-5">
+                        <div class="col-12 text-center">
+                            <h1 class="text-white animated slideInDown">Internship</h1>
+                            <hr class="bg-white mx-auto mt-0" style="width: 90px;">
+                           <!-- <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a class="text-white" href="#">Home</a></li>
+                                    <li class="breadcrumb-item"><a class="text-white" href="#">Pages</a></li>
+                                    <li class="breadcrumb-item text-white active" aria-current="page">Project</li>
+                                </ol>
+                            </nav>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <!-- Projects Start -->
+        <div class="container-xxl py-5">
+            <div class="container py-5 px-lg-5">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="section-title text-secondary justify-content-center"><span></span>Our Popular Internships <span></span></p>
+                    <h1 class="text-center mb-5">Unlock your potential with Growcell Internship program</h1>
+                </div>
+                <div class="row mt-n2 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="col-12 text-center">
+                        <!--<ul class="list-inline mb-5" id="portfolio-flters">
+                            <li class="mx-2 active" data-filter="*">All</li>
+                            <li class="mx-2" data-filter=".first">Web Design</li>
+                            <li class="mx-2" data-filter=".second">Graphic Design</li>
+                        </ul>-->
+                    </div>
+                </div>
+
+
+                <style>
+                    /* Add spacing between divs */
+.portfolio-item {
+  padding: 15px;
+}
+
+/* Reduce spacing on smaller devices */
+@media (max-width: 768px) {
+  .portfolio-item {
+    padding: 10px;
+  }
+}
+
+/* Ensure consistent spacing around images */
+.img-fluid {
+  border-radius: 8px;
+}
+
+/* Reduce overlay size for smaller screens */
+.portfolio-overlay {
+  padding: 10px;
+}
+
+/* Add space between rows and center the content */
+.row {
+  margin: 0 -10px;
+}
+
+/* Responsive image size */
+@media (max-width: 576px) {
+  .portfolio-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+/* Add spacing and padding to portfolio items */
+.portfolio-item {
+  padding: 10px;
+}
+
+/* Add shadow and rounded corners for a modern look */
+.shadow-sm {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow */
+  border-radius: 10px;
+}
+
+/* Adjust portfolio overlay spacing for smaller devices */
+.portfolio-overlay {
+  padding: 10px;
+}
+
+/* Responsive layout for tablets and smaller screens */
+@media (max-width: 768px) {
+  .portfolio-item {
+    padding: 10px;
+    width: 100%; /* Full width on smaller devices */
+    margin-bottom: 15px;
+  }
+}
+
+/* Reduce spacing for mobile view */
+@media (max-width: 576px) {
+  .portfolio-item {
+    padding: 8px;
+  }
+}
+
+/* Add spacing and padding to portfolio items */
+.portfolio-item {
+  padding: 10px; /* Adds spacing around each card */
+}
+
+/* Add shadow and rounded corners for a modern look */
+.shadow-sm {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional */
+  border-radius: 10px;
+}
+
+/* Adjust portfolio overlay spacing for smaller devices */
+.portfolio-overlay {
+  padding: 10px;
+}
+
+/* Responsive layout for tablets and smaller screens */
+@media (max-width: 768px) {
+  .portfolio-item {
+    padding: 10px;
+    width: 100%; /* Full width on smaller devices */
+    margin-bottom: 15px;
+  }
+}
+
+/* Reduce spacing for mobile view */
+@media (max-width: 576px) {
+  .portfolio-item {
+    padding: 8px;
+  }
+}
+
+                </style>
+
+                <div class="row g-4 portfolio-container">
+                <!--    <div>
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/webd.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                  --  <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-1.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>  --
+                                    <a class="btn btn-square btn-outline-light mx-1" href="intern.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <a href="intern.html" target="_blank">
+                                <p class="text-primary fw-medium mb-2">Web Development</p>
+                                </a>
+                               !-- <h5 class="lh-base mb-0">Designing, Building, and Elevating Seamless and Interactive Web User Experiences.</a>  --
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/appmob.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    -- <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-2.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>  -
+                                    <a class="btn btn-square btn-outline-light mx-1" href="intern.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <a href="intern.html" target="_blank">
+                                <p class="text-primary fw-medium mb-2">Android Development</p>
+                                </a>
+                                <h5 class="lh-base mb-0">Innovating through powerful, user-focused Android app development for growth.</a>  --
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded overflow-hidden">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/fullst.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                   !-- <a class="btn btn-square btn-outline-light mx-1" href="img/portfolio-3.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a> -
+                                    <a class="btn btn-square btn-outline-light mx-1" href="intern.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-4">
+                                <a href="intern.html" target="_blank">
+                                <p class="text-primary fw-medium mb-2">Full-Stack Web Development</p>
+                                </a>
+                              --  <h5 class="lh-base mb-0">Developing complete, scalable full-stack solutions for seamless digital transformation.</a>  -
+                            </div>
+                        </div>
+                    </div>
+                </div>  -->
+                <div class="row g-4"> <!-- Add "g-4" for gap/spacing -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded overflow-hidden shadow-sm"> <!-- Add shadow for aesthetics -->
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/webd.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="intern.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-3">
+                                <a href="intern.html" target="_blank">
+                                    <p class="text-primary fw-medium mb-2">Web Development</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded overflow-hidden shadow-sm">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/appmob.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="intern.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-3">
+                                <a href="intern.html" target="_blank">
+                                    <p class="text-primary fw-medium mb-2">Android Development</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
+                        <div class="rounded overflow-hidden shadow-sm">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/fullst.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="intern.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-3">
+                                <a href="intern.html" target="_blank">
+                                    <p class="text-primary fw-medium mb-2">Full-Stack Web Development</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4"> <!-- Added g-4 for spacing -->
+                    <!-- Java Developer Card -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="rounded overflow-hidden shadow-sm"> <!-- Optional: Add shadow for effect -->
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/java.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="intern.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-3">
+                                <a href="intern.html" target="_blank">
+                                    <p class="text-primary fw-medium mb-2">Java Developer</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Python Developer Card -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="rounded overflow-hidden shadow-sm">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/python.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="intern.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-3">
+                                <a href="intern.html" target="_blank">
+                                    <p class="text-primary fw-medium mb-2">Python Developer</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Data Science Card -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="rounded overflow-hidden shadow-sm">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/datas.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="intern.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-3">
+                                <a href="intern.html" target="_blank">
+                                    <p class="text-primary fw-medium mb-2">Data Science</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4"> <!-- Added g-4 for spacing -->
+                    <!-- Machine Learning Card -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.12s">
+                        <div class="rounded overflow-hidden shadow-sm"> <!-- Add shadow for aesthetics -->
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/machine.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="intern.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-3">
+                                <a href="intern.html" target="_blank">
+                                    <p class="text-primary fw-medium mb-2">Machine Learning</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- UI/UX Card -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.12s">
+                        <div class="rounded overflow-hidden shadow-sm">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/uiuxp.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="intern.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-3">
+                                <a href="intern.html" target="_blank">
+                                    <p class="text-primary fw-medium mb-2">UI/UX</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <!-- Digital Marketing Card -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.12s">
+                        <div class="rounded overflow-hidden shadow-sm">
+                            <div class="position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/dm.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <a class="btn btn-square btn-outline-light mx-1" href="intern.html"><i class="fa fa-link"></i></a>
+                                </div>
+                            </div>
+                            <div class="bg-light p-3">
+                                <a href="intern.html" target="_blank">
+                                    <p class="text-primary fw-medium mb-2">Digital Marketing</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+        <!-- Projects End -->
+        
+
+        <!-- Footer Start -->
+         <!-- Footer Start -->
+         <div class="container-fluid bg-primary text-light footer wow fadeIn" data-wow-delay="0.1s">
+            <div class="container py-5 px-lg-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                        <p><i class="fa fa-map-marker-alt me-3"></i>Motihari,Bihar 845417 </p>
+                        <p><i class="fa fa-phone-alt me-3"></i>+91 95195 53053</p>
+                        <p><i class="fa fa-envelope me-3"></i>growcelldigital@gmail.com<span></span></p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href="https://x.com/growcelldigital?t=5qd5WtL_MvcNW5KDEhtaWg&s=09"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://github.com/Growcell-IT-Architect"><i class="fab fa-github"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/growcell.in?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i class="fab fa-instagram"></i></a>
+                            <a class="btn btn-outline-light btn-social" href="https://www.linkedin.com/company/growcell/"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
+                        <a class="btn btn-link" href="about.html">About Us</a>
+                        <a class="btn btn-link" href="comm.html">Contact Us</a>
+                      <!--  <a class="btn btn-link" href="">Privacy Policy</a> -->
+                        <a class="btn btn-link" href="policy.html">Cancellation Policy</a>
+                        <a class="btn btn-link" href="905.html">Career</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <!--<p class="section-title text-white h5 mb-4">Company<span></span></p>-->
+
+                        <img src="img/foter.png" class="responsive-foterimage" alt="foter"> 
+                        <p class="text-white pb-3 animated slideInDown">Future-ready IT solutions empowering enterprises with innovation, efficiency, and seamless technology to drive growth, scalability, and digital transformation effortlessly </p>
+                        
+                    </div>
+
+                        <!--<p class="section-title text-white h5 mb-4">Gallery<span></span></p>-->
+                       <!-- <div class="row g-2">
+                            <p class="text-white pb-3 animated slideInDown">Driving innovation, connectivity, intelligence, and transformation to deliver future-ready IT solutions for enterprises.</p>
+                       -->
+                          <!--    <p class="m-0">SEO optimization enhances website visibility using keywords, quality content, backlinks, and technical improvements to boost rankings, drive traffic, and improve user experience.<span></span></p>-->
+                          
+                          <!--  <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-1.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-2.jpg" alt="Image">
+                            </div>   
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-3.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-4.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-5.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-6.jpg" alt="Image">
+                            </div>
+                        </div> -->
+                    
+                  <!--  <div class="col-md-6 col-lg-3">
+                        <p class="section-title text-white h5 mb-4">Gallery<span></span></p>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-1.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-2.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-3.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-4.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-5.jpg" alt="Image">
+                            </div>
+                            <div class="col-4">
+                                <img class="img-fluid" src="img/portfolio-6.jpg" alt="Image">
+                            </div>
+                        </div>
+                    </div> -->
+                  <div class="col-md-6 col-lg-3">
+                    <img src="img/design1.jpg" class="responsive-foterimage" alt="foter"> 
+                   <!-- <img src="img/22logo.png"class="responsive-image" alt="MSME-Logo"> 
+                    <img src="img/stpind.png" class="responsive-stepimag" alt="step"> -->
+                    <p class="text-white pb-3 animated slideInDown">Enabling MSMEs & Startups with Cutting-Edge IT Solutions – Innovate, Scale, and Thrive in the Digital Era with Future-Ready Technology.</p>
+                    </div>  
+                  <!--  <div>                        
+                        <img src="img/stpind.png" class="responsive-stepimag" alt="step">
+                    </div>  -->
+                  <!--  <div class="col-md-6 col-lg-3">
+                       <p class="section-title text-white h5 mb-4">Newsletter   prev<span></span></p>
+                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
+                        <div class="position-relative w-100 mt-3"> 
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;"> 
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button> 
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="container px-lg-5">
+                <div class="copyright"> 
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            &copy; <a class="border-bottom" href="">2024</a>, All Right Reserved. 
+							
+							<!--/***  Thank you for your support. ***/-->
+							Designed By <a class="border-bottom" href="https://growcell.in">Growcell IT Architect™</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="index.html">Home</a>
+                              <!--  <a href="">Cookies</a> -->
+                                <a href="405.html">Help</a>
+                                <a href="faq.html">FQAs</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-secondary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    
+    
+</body>
+
+</html>
