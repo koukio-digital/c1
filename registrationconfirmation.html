@@ -372,8 +372,8 @@
                 <div class="checkmark-container">
                     <div class="checkmark"></div>
                 </div>
-                <h3>Thank You!</h3>
-                <p>Your registration has been submitted successfully.</p>
+                <h3>Congratulations!</h3>
+                <p>Your internship registration has been successfully submitted. After review, your application will be processed and the offer letter will be shared shortly.</p>
                 <button class="close-btn" onclick="closeModalAndRedirect()">OK</button>
             </div>
         </div>
@@ -497,7 +497,7 @@
                     var file = fileInput.files[0];
                     // Check file size
                     if (file.size > 182400) { // 100KB in bytes
-                        alert("Error: File size exceeds 100 KB. Please upload a smaller file.");
+                        alert("Error: File size exceeds 150 KB. Please upload a smaller file.");
                         submitButton.disabled = false;
                         submitButton.textContent = "Submit Registration";
                         return;
@@ -515,7 +515,7 @@
             });
 
             function submitForm(data, submitButton) {
-                fetch("https://script.google.com/macros/s/AKfycbzi8fr7M9yY0TACkIJw0uEqKbD7fNlR6hKY5kaU--KRVNx7dZc0P81Zy34iks7sAUgFJA/exec", {
+                fetch("https://script.google.com/macros/s/AKfycbwL44mVxhzkAMfJQIY3gBjdtgLYqIlWq7HMGybxBAsV7abygtRwGazpyEVGNN92mw98VQ/exec", {
                     method: "POST",
                     mode: "no-cors",
                     headers: { "Content-Type": "application/json" },
