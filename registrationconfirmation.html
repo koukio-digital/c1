@@ -343,18 +343,18 @@
                     <div class="payment-qr">
                         <p>Scan this QR code to pay:</p>
                         <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=upi://pay?pa=9472146511@ibl&pn=Growcell&am=159&cu=INR&tn=Internship Fee" alt="Payment QR Code">
-                        <p>UPI ID: 9472146511@ibl</p>
+                        
                     </div>
                     
                     <div class="payment-upi">
                         <p>Click below to pay via UPI:</p>
-                        <a href="upi://pay?pa=9472146511@ibl&pn=Growcell&am=159&cu=INR&tn=Internship Fee">
+                        <a href="upi://pay?pa=44188677956@sbi&pn=Growcell&am=159&cu=INR&tn=Internship Fee">
                             Pay ₹159 via UPI
                         </a>
                     </div>
                 </div>
 
-                <label for="payment_receipt">Upload Payment Receipt/Screenshot (Image/PDF, Max 100KB):</label>
+                <label for="payment_receipt">Upload Payment Receipt/Screenshot (Image/PDF, Max 150KB):</label>
                 <input type="file" id="payment_receipt" name="payment_receipt" accept="image/*,application/pdf" required>
 
                 <div class="terms-inline">
@@ -496,7 +496,7 @@
                 if (fileInput.files.length > 0) {
                     var file = fileInput.files[0];
                     // Check file size
-                    if (file.size > 102400) { // 100KB in bytes
+                    if (file.size > 182400) { // 100KB in bytes
                         alert("Error: File size exceeds 100 KB. Please upload a smaller file.");
                         submitButton.disabled = false;
                         submitButton.textContent = "Submit Registration";
@@ -555,11 +555,11 @@
 
             document.getElementById("payment_receipt").addEventListener("change", function (e) {
                 const file = e.target.files[0];
-                const maxSize = 102400; // 100KB in bytes
+                const maxSize = 182400; // 100KB in bytes
                 const submitButton = document.getElementById("submitBtn");
 
                 if (file && file.size > maxSize) {
-                    alert("Error: File size exceeds 100 KB. Please upload a smaller file.");
+                    alert("Error: File size exceeds 150 KB. Please upload a smaller file.");
                     e.target.value = "";
                     if (submitButton.disabled) {
                         submitButton.disabled = false;
